@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typing Game</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/a95e2c876b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="difficulty-container">
+      <label for="difficulty">Difficulty:</label>
+      <div class="select-container">
+        <select name="difficulty" id="difficulty">
+          <option value="Easy">Easy</option>
+          <option value="Medium">Medium</option>
+          <option value="Hard">Hard</option>
+        </select>
+        <i class="fas fa-caret-down" id="down"></i>
+      </div>
+    </div>
+    <div class="game-container" id="game-container">
+      <h2>🚨Speed Typer🚨</h2>
+      <p class="time-left">Time left: <span id="time-left">6</span>s</p>
+      <p class="score">Score: <span id="score">0</span></p>
+      <p class="type">Type the following:</p>
+      <h2 class="word" id="word"></h2>
+      <input
+        type="text"
+        id="text"
+        placeholder="Type the word and press enter.."
+        autofocus
+      />
+    </div>
+    <button class="toggle" id="toggle">o</button>
+    <script src="./script.js"></script>
+  </body>
+</html>

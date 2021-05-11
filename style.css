@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-color: #2d132c;
+  margin: 0;
+  color: white;
+  position: relative;
+}
+
+.difficulty-container {
+  text-align: center;
+  background-color: #801336;
+  padding: 10px 0;
+}
+
+.select-container {
+  position: relative;
+  width: 100px;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 5px;
+  font-family: "Roboto", sans-serif;
+  background-color: #c72c41;
+  color: #ffff;
+  width: 100%;
+  border: 1px solid #2d132c;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+i {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(-50%, 30%);
+  pointer-events: none;
+}
+
+select:focus {
+  border: 1px solid white;
+}
+
+.game-container {
+  background-color: #ee4540;
+  margin: 140px auto;
+  width: 400px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 0 0 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 600px) {
+  .game-container {
+    width: 80%;
+  }
+}
+
+.game-container h2 {
+  margin: 0 auto;
+  background-color: #801336;
+  width: 100%;
+  padding: 5px 0;
+}
+
+.time-left {
+  position: absolute;
+  margin: 5px 0;
+  left: 15px;
+  font-weight: bold;
+}
+
+.score {
+  position: absolute;
+  margin: 5px 0;
+  right: 15px;
+  font-weight: bold;
+}
+
+.type {
+  margin-top: 100px;
+  margin-bottom: 0;
+  font-size: 0.9em;
+}
+
+.game-container .word {
+  background-color: #ee4540;
+  margin-top: 0;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.game-container .word.incorrect {
+  color: red;
+}
+
+input {
+  width: 50%;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid #2d132c;
+}
+
+.toggle {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  border: none;
+  background-color: #ee4540;
+  font-size: 16px;
+  padding: 5px 10px;
+  color: #ffff;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.toggle:hover {
+  transform: scale(1.1);
+}
+
+.toggle:focus {
+  outline: none;
+}
+
+.game-container .time-out,
+.game-container .final-score {
+  background-color: #ee4540;
+  margin: 30px 0;
+}
+
+.game-container .time-out {
+  animation: blink 0.5s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    color: white;
+  }
+  50% {
+    color: red;
+  }
+}
